@@ -1,0 +1,79 @@
+# GmailAgent Configuration Example
+#
+# This is an example configuration file for GmailAgent.
+# Copy this file to ~/.gmailagent/config.yaml and update with your settings.
+
+# Gmail API Configuration
+gmail_api:
+  # OAuth 2.0 credentials (downloaded from Google Cloud Console)
+  # Place your credentials.json file in ~/.gmailagent/credentials.json
+  credentials_path: "~/.gmailagent/credentials.json"
+
+  # Token storage path (automatically created after authentication)
+  token_path: "~/.gmailagent/token.pickle"
+
+  # API scope (readonly access only)
+  scopes:
+    - "https://www.googleapis.com/auth/gmail.readonly"
+
+# Export Configuration
+export:
+  # Default output directory for Excel files
+  default_directory: "./exports"
+
+  # Maximum number of emails to retrieve per export
+  default_limit: 1000
+
+  # Date format for Excel date column
+  date_format: "%Y-%m-%d %H:%M:%S"
+
+  # Filename generation settings
+  filename:
+    # Date format in filename (DD.MM.YYYY)
+    date_format: "%d.%m.%Y"
+    # Time format in filename (HHMMSS)
+    time_format: "%H%M%S"
+    # Maximum filter text length in filename
+    max_filter_length: 50
+
+# URL Extraction Configuration
+url_extraction:
+  # Extract URLs from HTML emails (in addition to plain text)
+  extract_from_html: true
+
+  # Extract URLs from plain text emails
+  extract_from_text: true
+
+  # Remove duplicate URLs from results
+  deduplicate: true
+
+  # Format for multiple URLs in Excel cell
+  multiple_url_format: ", "  # comma-separated
+
+# Logging Configuration (optional)
+logging:
+  # Enable debug logging
+  debug: false
+
+  # Log file path
+  log_file: "~/.gmailagent/error.log"
+
+  # Log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  log_level: "INFO"
+
+# Performance Settings
+performance:
+  # Number of emails to process in parallel (for future optimization)
+  batch_size: 50
+
+  # API request timeout in seconds
+  timeout: 30
+
+  # Retry failed API requests
+  retry_on_error: true
+
+  # Maximum number of retries
+  max_retries: 3
+
+# Note: Most settings can be overridden via command-line options
+# See 'gmailagent --help' for available CLI options

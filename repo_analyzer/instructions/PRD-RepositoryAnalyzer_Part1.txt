@@ -1,0 +1,43 @@
+# Repository Analyzer Agent - Product Requirements Document
+
+**Version:** 1.0
+**Date:** November 23, 2025
+**Author:** Product Team
+**Status:** Draft
+**Project:** EmailSkillAgents Extension - Repository Code Metrics Analyzer
+
+---
+
+## Executive Summary
+
+The Repository Analyzer Agent is an automated code quality assessment tool that processes Excel files containing repository URLs, clones each repository, calculates code quality metrics, and generates a comprehensive grading report. This agent extends the existing GmailAgent ecosystem by enabling automated homework/project evaluation based on code structure metrics.
+
+The tool is designed to work in a **multithreaded environment**, processing multiple repositories in parallel, and updating the output Excel file incrementally as results become available. This enables efficient batch processing of large numbers of repositories while providing real-time progress visibility.
+
+### Key Value Proposition
+- **Automated Assessment**: Eliminate manual repository evaluation
+- **Parallel Processing**: Process multiple repositories simultaneously for maximum efficiency
+- **Code Quality Metrics**: Objective, quantifiable code structure assessment
+- **Integration Ready**: Seamless integration with existing GmailAgent workflow
+- **Real-time Updates**: Progressive Excel updates as analysis completes
+
+---
+
+## Problem Statement
+
+### Background
+Educators and code reviewers need to evaluate multiple student repositories or project submissions. Manual evaluation is time-consuming and subjective. While tools exist for code analysis, none provide:
+1. Batch processing from Excel input
+2. Parallel repository cloning and analysis
+3. Incremental Excel output updates
+4. Simple file organization metrics
+
+### User Problem
+"I receive homework submissions as GitHub URLs in my Gmail, export them to Excel using GmailAgent, but then need to manually clone each repository, count lines of code, and assess code organization. This takes hours for a class of 30 students."
+
+### Business Problem
+- **Time Cost**: 5-10 minutes per repository x 30 students = 2.5-5 hours per assignment
+- **Inconsistency**: Manual counting leads to subjective, error-prone assessments
+- **Scalability**: Cannot process multiple classes or large batches efficiently
+- **Delayed Feedback**: Students wait days for code structure feedback
+
