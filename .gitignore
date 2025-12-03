@@ -28,11 +28,7 @@ token.json
 credentials.json
 gmail_token.json
 
-# Outputs and temporary files
-exports/
-output/
-greetings_results/
-email_drafts/
+# Cloned repositories (large files)
 repos/
 
 # IDE
