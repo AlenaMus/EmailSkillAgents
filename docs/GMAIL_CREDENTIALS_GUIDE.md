@@ -6,7 +6,7 @@ There are **TWO types** of Google credentials:
 
 ### 1. ❌ API Key (What You Have)
 - File: `apiKeyGmail.txt`
-- Contains: `AIzaSyD8qJIb3TFVpR7JPSZTXZNSdk09cp4yJjo`
+- Contains: `AIzaSy...` (Google API Key)
 - **Cannot access Gmail emails** (only for public data)
 - Used for: Maps, YouTube public data, etc.
 
