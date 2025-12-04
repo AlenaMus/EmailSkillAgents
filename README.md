@@ -136,6 +136,47 @@ python orchestrator.py
 
 ---
 
+## 📸 Successful Test Run Examples
+
+Below are screenshots from a successful complete workflow execution (Option 5):
+
+### 🎯 Agent Execution Flow
+
+**Agent 1: Gmail Export**
+
+![Test Run 1](test_run/testrun1.png)
+
+**Agent 2: Repository Analyzer**
+
+![Test Run 2](test_run/testrun2.png)
+
+**Agent 3: Greetings Generator**
+
+![Test Run 3](test_run/testrun3.png)
+
+**Agent 4: Evaluation Sender**
+
+![Test Run 4](test_run/testrun4.png)
+
+### 📧 Gmail Drafts Created
+
+**Received Drafts in Gmail**
+
+![Gmail Drafts](test_run/ReceivedDraftsFromAgents.png)
+
+**Email Content with Personalized Greeting**
+
+![Email Content](test_run/ReceivedEmailGreetingDraftContent.png)
+
+**Results Summary:**
+- ✅ 6 emails exported from Gmail
+- ✅ 4 repositories analyzed successfully
+- ✅ 4 personalized greetings generated
+- ✅ 4 HTML email drafts created in Gmail
+- ✅ 2 students skipped (Invalid URL)
+
+---
+
 ## 🆘 Support
 
 For detailed information, see the documentation in the **`instructions/`** folder.
